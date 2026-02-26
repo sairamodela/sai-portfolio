@@ -1,255 +1,760 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sairam Odela's Portfolio showcasing projects, skills, certifications, and more.">
-    <title>Sairam Odela - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Software Engineer Sairam Odela – backend, data, and cloud projects, experience, skills, and certifications."
+    />
+    <title>Sairam Odela · Software Engineer</title>
 
-<!-- ✅ Navbar -->
-<nav id="navbar">
-    <ul>
-        <li><a href="#profile" class="nav-link">Home</a></li>
-        <!-- <li><a href="#about-me" class="nav-link">About Me</a></li> -->
-        <li><a href="#education" class="nav-link">Education</a></li>
-        <li><a href="#work-experience" class="nav-link">Work Experience</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#internships" class="nav-link">Internships</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#certifications" class="nav-link">Certifications</a></li>
-        <li><a href="#contact" class="nav-link">Contact Me</a></li>
-    </ul>
-</nav>
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-<!-- ✅ Profile -->
-<section id="profile">
-    <div class="profile-content">
-        <div class="profile-image">
-            <h2>About Me!</h2>
-            <img src="kittu.jpg" alt="Sairam Odela">
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-dym/9xT7P1QXWcE2GjZq8pt5TR1+t0NenE2no0RvrRZtGJPD7WvVManIeZDV4SSQdlqz1WY5Avzk1l3pNGdisw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- AOS Animate On Scroll -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- Header / Navigation -->
+      <header id="site-header" class="site-header">
+        <div class="site-header-inner">
+          <a href="#profile" class="brand">
+            <span class="brand-mark">SO</span>
+            <span class="brand-text">
+              <span class="brand-name">Sairam Odela</span>
+              <span class="brand-role">Software Engineer</span>
+            </span>
+          </a>
+
+          <nav id="site-nav" class="site-nav">
+            <a href="#profile" class="nav-link is-active">About</a>
+            <a href="#work-experience" class="nav-link">Experience</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#certifications" class="nav-link">Certifications</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </nav>
+
+          <div class="header-actions">
+            <button
+              id="nav-toggle"
+              class="icon-button nav-toggle"
+              aria-label="Toggle navigation"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
         </div>
-        <h1>Sairam Odela</h1>
-        <div class="card about-me">
-            <p>Hi, I'm Sairam Odela — a curious mind who loves turning ideas into working solutions. 
-            I enjoy building backend systems, playing with data, and using cloud tools to make applications smarter and faster. 
-            When I’m not coding, I’m learning new tech, solving problems, and finding better ways to do things. 
-            Every project I work on is a chance to grow, create something meaningful, and leave an impact.</p>
+      </header>
+
+      <!-- Main content -->
+      <main class="page-main">
+        <!-- Hero / Profile -->
+        <section
+          id="profile"
+          class="section section-hero"
+          data-aos="fade-up"
+          data-aos-duration="900"
+        >
+          <div class="section-inner hero-grid">
+            <div class="hero-copy">
+              <p class="eyebrow">Backend · Data · Cloud</p>
+              <h1 class="hero-title">Building reliable, data‑driven systems.</h1>
+              <p class="hero-subtitle">
+                I’m <span class="text-strong">Sairam Odela</span>, a software
+                engineer focused on turning real‑world requirements into
+                scalable, production‑ready backend services and data workflows.
+              </p>
+
+              <p class="hero-body">
+                I currently work at <span class="text-strong">Verisk Analytics</span>,
+                where I design and implement services with
+                <span class="text-strong">Python, PostgreSQL, and AWS</span>.
+                I enjoy taking features from idea to deployment with a strong
+                focus on performance, reliability, and clean architecture.
+              </p>
+
+              <div class="hero-actions">
+                <a
+                  href="mailto:saiodela2@gmail.com"
+                  class="btn btn-primary"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i class="fas fa-paper-plane"></i>
+                  <span>Get in touch</span>
+                </a>
+                <a
+                  href="https://github.com/sairamodela"
+                  class="btn btn-ghost"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i class="fab fa-github"></i>
+                  <span>View GitHub</span>
+                </a>
+              </div>
+
+              <div class="hero-meta">
+                <div class="meta-item">
+                  <span class="meta-label">Current</span>
+                  <span class="meta-value">Software Engineer · Verisk Analytics</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Location</span>
+                  <span class="meta-value">Warangal, India</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Focus</span>
+                  <span class="meta-value">Backend, Data, Cloud & ML</span>
+                </div>
+              </div>
+            </div>
+
+            <aside class="hero-aside" data-aos="fade-left" data-aos-delay="150">
+              <div class="card card-profile">
+                <div class="avatar-wrapper">
+                  <img
+                    src="kittu.jpg"
+                    alt="Portrait of Sairam Odela"
+                    class="avatar"
+                  />
+                </div>
+                <div class="card-profile-body">
+                  <p>
+                    I enjoy building systems that are easy to reason about,
+                    observable in production, and straightforward to extend.
+                    Whether it’s ETL pipelines, APIs, or data‑driven products,
+                    I like owning the details end‑to‑end.
+                  </p>
+                  <div class="inline-links">
+                    <a
+                      href="https://www.linkedin.com/in/sairamodela"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a
+                      href="https://github.com/sairamodela"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a
+                      href="https://www.instagram.com/iam.sai.18/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <!-- Experience -->
+        <section
+          id="work-experience"
+          class="section"
+          data-aos="fade-up"
+          data-aos-duration="900"
+        >
+          <div class="section-inner">
+            <div class="section-header">
+              <p class="eyebrow">Experience</p>
+              <h2 class="section-title">Work Experience</h2>
+            </div>
+
+            <article class="card card-timeline">
+              <header class="card-timeline-header">
+                <div>
+                  <h3>Software Engineer · Verisk Analytics</h3>
+                  <p class="card-subtitle">2024 – Present</p>
+                </div>
+              </header>
+              <p class="card-body">
+                At Verisk Analytics, I work on backend solutions and cloud
+                applications that make measurable impact. I help design and
+                implement services that automate workflows, improve data
+                quality, and support analytics at scale.
+              </p>
+              <ul class="card-list">
+                <li>
+                  <strong>ETL pipeline development:</strong> Designed and
+                  automated a full ETL workflow to process large‑scale property
+                  datasets. Implemented data cleaning, transformation, and
+                  loading into AWS RDS (PostgreSQL), and built a Flask‑based
+                  web app enabling dynamic property search and filtering.
+                </li>
+                <li>
+                  <strong>LegalGenAI platform:</strong> Contribute to
+                  backend REST APIs for an AI‑driven legal platform. Optimize
+                  PostgreSQL queries, manage database operations, and ensure
+                  smooth deployments via GitLab CI/CD while collaborating with
+                  senior engineers to deliver scalable services.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <!-- Projects -->
+        <section
+          id="projects"
+          class="section"
+          data-aos="fade-up"
+          data-aos-duration="900"
+        >
+          <div class="section-inner">
+            <div class="section-header">
+              <p class="eyebrow">Selected Work</p>
+              <h2 class="section-title">Projects</h2>
+            </div>
+
+            <div class="grid grid-3">
+              <article class="card card-project">
+                <div class="card-badge">Machine Learning</div>
+                <h3>Signature Verification Using Machine Learning</h3>
+                <p class="card-meta">
+                  Python · Scikit‑learn · Classification
+                </p>
+                <p class="card-body">
+                  Developed a model to authenticate handwritten signatures using
+                  a dataset of genuine and forged samples, achieving high
+                  classification accuracy and demonstrating end‑to‑end ML model
+                  development.
+                </p>
+                <a
+                  href="https://github.com/sairamodela/signature-verification"
+                  class="link-inline"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>View project</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </article>
+
+              <article class="card card-project">
+                <div class="card-badge">NLP</div>
+                <h3>Fake News Detection Using Machine Learning</h3>
+                <p class="card-meta">
+                  Python · NLP · Text Classification
+                </p>
+                <p class="card-body">
+                  Designed a system that uses natural language processing and
+                  machine learning to classify news articles as real or fake,
+                  focusing on text preprocessing, feature engineering, and
+                  robust evaluation.
+                </p>
+                <a
+                  href="https://github.com/sairamodela/fake-news-detection"
+                  class="link-inline"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>View project</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </article>
+
+              <article class="card card-project">
+                <div class="card-badge">Flask · ML</div>
+                <h3>Fraud Detection in Financial Transactions</h3>
+                <p class="card-meta">
+                  Python · Flask · Machine Learning
+                </p>
+                <p class="card-body">
+                  Built a Flask application backed by a machine learning model
+                  that detects potentially fraudulent transactions with around
+                  95% accuracy, emphasizing feature selection and inference
+                  latency.
+                </p>
+                <a
+                  href="https://github.com/sairamodela/Fraud-Detection-In-Financial-Transactions"
+                  class="link-inline"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>View project</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Skills -->
+        <section
+          id="skills"
+          class="section section-alt"
+          data-aos="fade-up"
+          data-aos-duration="900"
+        >
+          <div class="section-inner">
+            <div class="section-header">
+              <p class="eyebrow">Strengths</p>
+              <h2 class="section-title">Skills</h2>
+            </div>
+
+            <div class="grid grid-3 skills-grid">
+              <div class="card card-skill-group">
+                <h3>Languages & Core</h3>
+                <ul>
+                  <li>Python</li>
+                  <li>Java</li>
+                  <li>C</li>
+                  <li>JavaScript</li>
+                </ul>
+              </div>
+
+              <div class="card card-skill-group">
+                <h3>Web & Frameworks</h3>
+                <ul>
+                  <li>HTML & CSS</li>
+                  <li>Angular</li>
+                  <li>Flask</li>
+                </ul>
+              </div>
+
+              <div class="card card-skill-group">
+                <h3>Data & Cloud</h3>
+                <ul>
+                  <li>MySQL & PostgreSQL</li>
+                  <li>AWS</li>
+                  <li>ETL Pipelines</li>
+                </ul>
+              </div>
+
+              <div class="card card-skill-group">
+                <h3>Developer Tools</h3>
+                <ul>
+                  <li>Git, GitHub, GitLab</li>
+                  <li>CI/CD Pipelines</li>
+                  <li>Postman</li>
+                </ul>
+              </div>
+
+              <div class="card card-skill-group">
+                <h3>IDEs & Environments</h3>
+                <ul>
+                  <li>VS Code</li>
+                  <li>Eclipse IDE</li>
+                  <li>IntelliJ IDEA</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section
+          id="education"
+          class="section"
+          data-aos="fade-up"
+          data-aos-duration="900"
+        >
+          <div class="section-inner">
+            <div class="section-header">
+              <p class="eyebrow">Background</p>
+              <h2 class="section-title">Education</h2>
+            </div>
+
+            <div class="timeline">
+              <article class="timeline-item card">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h3>Bachelor of Technology · CSE</h3>
+                  <p class="card-subtitle">
+                    Balaji Institute of Technology and Science · 2020 – 2024
+                  </p>
+                  <p class="card-meta">
+                    Affiliated with JNTU Hyderabad · Warangal, India
+                  </p>
+                  <p class="card-body">
+                    GPA: <strong>7.54</strong> · Specialization in Computer
+                    Science and Engineering.
+                  </p>
+                  <p class="card-body">
+                    Key academic projects included signature verification,
+                    fake news detection, and fraud detection in financial
+                    transactions using machine learning.
+                  </p>
+                </div>
+              </article>
+
+              <article class="timeline-item card">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h3>Intermediate (MPC)</h3>
+                  <p class="card-subtitle">
+                    NRI Junior College · 2018 – 2020
+                  </p>
+                  <p class="card-meta">
+                    Telangana State Board of Intermediate Education · Warangal,
+                    India
+                  </p>
+                  <p class="card-body">
+                    Percentage: <strong>95%</strong> · Built strong analytical
+                    and problem‑solving foundations across Mathematics, Physics,
+                    and Chemistry.
+                  </p>
+                </div>
+              </article>
+
+              <article class="timeline-item card">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h3>Secondary School Certificate (SSC)</h3>
+                  <p class="card-subtitle">
+                    Z.P.H.S Sangem · 2018
+                  </p>
+                  <p class="card-meta">
+                    Telangana State Board of Secondary Education · Warangal,
+                    India
+                  </p>
+                  <p class="card-body">
+                    GPA: <strong>8.5</strong> · Built a solid foundation for
+                    higher education in technology.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Internships -->
+        <section
+          id="internships"
+          class="section"
+          data-aos="fade-up"
+          data-aos-duration="900"
+        >
+          <div class="section-inner">
+            <div class="section-header">
+              <p class="eyebrow">Industry Exposure</p>
+              <h2 class="section-title">Internships</h2>
+            </div>
+
+            <article class="card">
+              <h3>
+                Accenture North America · Data Analytics and Visualization Job Simulation
+              </h3>
+              <p class="card-subtitle">Forage · November 2024</p>
+              <p class="card-body">
+                Completed a simulation focused on advising a hypothetical social
+                media client as a Data Analyst at Accenture. Cleaned, modeled,
+                and analyzed seven datasets to uncover content trends and inform
+                strategic decisions, then presented insights through slides and
+                video walkthroughs.
+              </p>
+              <a
+                href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/T6kdcdKSTfg2aotxT/hzmoNKtzvAzXsEqx8_T6kdcdKSTfg2aotxT_DR7vaaqnGKrf9vgLG_1732697439418_completion_certificate.pdf"
+                class="link-inline"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>View certificate</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <!-- Certifications -->
+        <section
+          id="certifications"
+          class="section section-alt"
+          data-aos="fade-up"
+          data-aos-duration="900"
+        >
+          <div class="section-inner">
+            <div class="section-header">
+              <p class="eyebrow">Continuous Learning</p>
+              <h2 class="section-title">Certifications</h2>
+            </div>
+
+            <p class="section-intro">
+              I actively pursue certifications to strengthen fundamentals and
+              stay aligned with emerging technologies across programming, data,
+              AI, and security.
+            </p>
+
+            <div class="grid grid-3">
+              <article class="card card-cert">
+                <h3>Basics of Python</h3>
+                <p class="card-body">
+                  Covered core Python syntax, functions, and problem solving
+                  through Infosys Springboard.
+                </p>
+                <a
+                  href="https://drive.google.com/file/d/1TfSk4322LS5aa1bVXym0r78Urfuo8Nu8/view"
+                  class="link-inline"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>View certificate</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </article>
+
+              <article class="card card-cert">
+                <h3>Programming Essentials in Python</h3>
+                <p class="card-body">
+                  Completed a Cisco Networking Academy program emphasizing
+                  Python best practices and structured problem solving.
+                </p>
+                <a
+                  href="https://drive.google.com/file/d/164QemQmeapZftkxdcxFeznYLQbvMNVi_/view"
+                  class="link-inline"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>View certificate</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </article>
+
+              <article class="card card-cert">
+                <h3>Python Certified</h3>
+                <p class="card-body">
+                  Validated Python programming proficiency via Kaggle’s
+                  certification track.
+                </p>
+                <a
+                  href="https://drive.google.com/file/d/1VQadm-9uEeAFpcMsRy1bLApYTXmWx38f/view"
+                  class="link-inline"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>View certificate</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </article>
+
+              <article class="card card-cert">
+                <h3>Java Foundations</h3>
+                <p class="card-body">
+                  Learned object‑oriented programming and Java fundamentals
+                  through Oracle Academy.
+                </p>
+                <a
+                  href="https://drive.google.com/file/d/1c0TdB2UE3ybKqIXeiH7C7UNmODs8hrTB/view"
+                  class="link-inline"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>View certificate</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </article>
+
+              <article class="card card-cert">
+                <h3>Introduction to Cybersecurity</h3>
+                <p class="card-body">
+                  Learned core cybersecurity concepts, threat identification,
+                  and mitigation strategies via Cisco Networking Academy.
+                </p>
+                <a
+                  href="https://drive.google.com/file/d/1FvV3YADlnQpyNLa-4q3dasyewsnySOuT/view"
+                  class="link-inline"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>View certificate</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </article>
+
+              <article class="card card-cert">
+                <h3>Cybersecurity Essentials</h3>
+                <p class="card-body">
+                  Deepened understanding of securing networks and identifying
+                  vulnerabilities through Cisco Networking Academy.
+                </p>
+                <a
+                  href="https://drive.google.com/file/d/1FvV3YADlnQpyNLa-4q3dasyewsnySOuT/view"
+                  class="link-inline"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>View certificate</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </article>
+
+              <article class="card card-cert">
+                <h3>Data Analytics and Visualization Job Simulation</h3>
+                <p class="card-body">
+                  Practiced end‑to‑end analytics workflow with Accenture on
+                  Forage, from cleaning and modeling datasets to presenting
+                  insights.
+                </p>
+                <a
+                  href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/T6kdcdKSTfg2aotxT/hzmoNKtzvAzXsEqx8_T6kdcdKSTfg2aotxT_DR7vaaqnGKrf9vgLG_1732697439418_completion_certificate.pdf"
+                  class="link-inline"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>View certificate</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </article>
+
+              <article class="card card-cert">
+                <h3>Introduction to Generative AI</h3>
+                <p class="card-body">
+                  Gained a foundational understanding of generative AI and
+                  language models through Google Cloud.
+                </p>
+                <a
+                  href="https://drive.google.com/file/d/1IymDwlXO0spaj4LJEmlh4oLomEcisLG3/view"
+                  class="link-inline"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>View certificate</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section
+          id="contact"
+          class="section section-contact"
+          data-aos="fade-up"
+          data-aos-duration="900"
+        >
+          <div class="section-inner">
+            <div class="section-header section-header-center">
+              <p class="eyebrow">Let’s Connect</p>
+              <h2 class="section-title">Connect With Me</h2>
+              <p class="section-intro">
+                If you’d like to discuss an opportunity, a project, or just
+                talk about backend, data, or cloud, feel free to reach out.
+              </p>
+            </div>
+
+            <div class="contact-grid">
+              <a
+                href="mailto:saiodela2@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+                class="contact-card"
+              >
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <span class="contact-label">Email</span>
+                  <span class="contact-value">saiodela2@gmail.com</span>
+                </div>
+              </a>
+
+              <a
+                href="tel:+919398370408"
+                target="_blank"
+                rel="noreferrer"
+                class="contact-card"
+              >
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                  <span class="contact-label">Phone</span>
+                  <span class="contact-value">+91 93983 70408</span>
+                </div>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/sairamodela"
+                target="_blank"
+                rel="noreferrer"
+                class="contact-card"
+              >
+                <i class="fab fa-linkedin-in"></i>
+                <div>
+                  <span class="contact-label">LinkedIn</span>
+                  <span class="contact-value">@sairamodela</span>
+                </div>
+              </a>
+
+              <a
+                href="https://github.com/sairamodela"
+                target="_blank"
+                rel="noreferrer"
+                class="contact-card"
+              >
+                <i class="fab fa-github"></i>
+                <div>
+                  <span class="contact-label">GitHub</span>
+                  <span class="contact-value">@sairamodela</span>
+                </div>
+              </a>
+
+              <a
+                href="https://www.instagram.com/iam.sai.18/"
+                target="_blank"
+                rel="noreferrer"
+                class="contact-card"
+              >
+                <i class="fab fa-instagram"></i>
+                <div>
+                  <span class="contact-label">Instagram</span>
+                  <span class="contact-value">@iam.sai.18</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Back to top -->
+      <button
+        id="back-to-top"
+        class="back-to-top"
+        aria-label="Back to top"
+      >
+        <i class="fas fa-chevron-up"></i>
+      </button>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="site-footer-inner">
+          <span>Designed &amp; built by <strong>Sairam Odela</strong></span>
         </div>
-    </div>
-</section>
-
-<!-- ✅ Education -->
-<section id="education">
-    <h2>Education</h2>
-    <div class="card education-entry">
-        <h3>Bachelor of Technology</h3>
-        <p><strong>Balaji Institute of Technology and Science</strong> (2020 – 2024)<br>
-        Affiliated with Jawaharlal Nehru Technological University (JNTU), Hyderabad | Warangal, India</p>
-        <p><strong>GPA:</strong> 7.54</p>
-        <p><strong>Specialization:</strong> Computer Science and Engineering</p>
-        <p><strong>Key Academic Projects:</strong></p>
-        <ul>
-            <li>Signature Verification Using Machine Learning – Developed a model to authenticate handwritten signatures with high accuracy.</li>
-            <li>Fake News Detection Using Machine Learning – Designed a system to detect and classify fake news articles.</li>
-            <li>Fraud Detection in Financial Transactions – Created a machine learning-powered system to detect fraudulent transactions with 95% accuracy.</li>
-        </ul>
+      </footer>
     </div>
 
-    <div class="card education-entry">
-        <h3>Intermediate (MPC)</h3>
-        <p><strong>NRI Junior College</strong> (2018 – 2020)<br>
-        Affiliated with the Telangana State Board of Intermediate Education | Warangal, India</p>
-        <p><strong>Branch:</strong> Mathematics, Physics, and Chemistry (MPC)</p>
-        <p><strong>Percentage:</strong> 95%</p>
-        <p>Gained strong analytical and problem-solving skills essential for engineering.</p>
-    </div>
-
-    <div class="card education-entry">
-        <h3>Secondary School Certificate (SSC)</h3>
-        <p><strong>Z.P.H.S Sangem</strong> (2018)<br>
-        Affiliated with the Telangana State Board of Secondary Education | Warangal, India</p>
-        <p><strong>GPA:</strong> 8.5</p>
-        <p>Built a solid foundation for higher education in technology.</p>
-    </div>
-</section>
-
-<!-- ✅ Work Experience -->
-<section id="work-experience">
-    <h2>Work Experience</h2>
-    <div class="card">
-        <h3>Software Engineer – Verisk Analytics</h3>
-        <span class="duration">2024 – Present</span>
-        <p>At Verisk Analytics, I work on backend solutions and cloud applications that truly make an impact. 
-        My role involves crafting efficient systems using Python, AWS, and PostgreSQL while contributing to projects 
-        that automate workflows and improve performance.</p>
-        <ul>
-            <li><strong>ETL Pipeline Development:</strong> Designed and automated a full ETL workflow to process massive property datasets. 
-                Implemented data cleaning, transformation, and loading into AWS RDS (PostgreSQL). Also built a Flask-based web app 
-                enabling dynamic property search and filtering.</li>
-            <li><strong>LegalGenAI Project:</strong> Developing and maintaining backend REST APIs for an AI-driven legal platform. 
-                I optimize PostgreSQL queries, manage database operations, and ensure seamless deployments using GitLab CI/CD 
-                while collaborating with senior engineers to deliver scalable services.</li>
-        </ul>
-        <p>This journey keeps me excited every day as I explore new technologies, solve real-world challenges, and grow as a developer.</p>
-    </div>
-</section>
-
-<!-- ✅ Skills -->
-<section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-        <div class="skill"><i class="fab fa-html5"></i><p>HTML</p></div>
-        <div class="skill"><i class="fab fa-css3-alt"></i><p>CSS</p></div>
-        <div class="skill"><i class="fab fa-js"></i><p>JavaScript</p></div>
-        <div class="skill"><i class="fab fa-angular"></i><p>Angular</p></div>
-        <div class="skill"><i class="fas fa-code"></i><p>C</p></div>
-        <div class="skill"><i class="fab fa-java"></i><p>Java</p></div>
-        <div class="skill"><i class="fab fa-python"></i><p>Python</p></div>
-        <div class="skill"><i class="fas fa-database"></i><p>MySQL</p></div>
-        <div class="skill"><i class="fas fa-database"></i><p>PostgreSQL</p></div>
-        <div class="skill"><i class="fab fa-aws"></i><p>AWS</p></div>
-        <div class="skill"><i class="fas fa-terminal"></i><p>GIT</p></div>
-        <div class="skill"><i class="fab fa-github"></i><p>GitHub</p></div>
-        <div class="skill"><i class="fab fa-gitlab"></i><p>GitLab</p></div>
-        <div class="skill"><i class="fas fa-project-diagram"></i><p>CI/CD Pipelines</p></div>
-        <div class="skill"><i class="fas fa-vial"></i><p>Postman</p></div>
-        <div class="skill"><i class="fas fa-cogs"></i><p>Eclipse IDE</p></div>
-        <div class="skill"><i class="fas fa-laptop-code"></i><p>VS Code</p></div>
-        <div class="skill"><i class="fas fa-code-branch"></i><p>IntelliJ IDEA</p></div>
-    </div>
-</section>
-
-<!-- ✅ Internships -->
-<section id="internships">
-    <h2>Internships</h2>
-    <div class="card internship">
-        <h3>Accenture North America Data Analytics and Visualization Job Simulation on Forage</h3>
-        <p><strong>November 2024</strong></p>
-        <p>Completed a simulation focused on advising a hypothetical social media client as a Data Analyst at Accenture. 
-        Cleaned, modeled, and analyzed 7 datasets to uncover insights into content trends to inform strategic decisions. 
-        Prepared a PowerPoint deck and video presentation to communicate key insights for the client and internal stakeholders.</p>
-        <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/T6kdcdKSTfg2aotxT/hzmoNKtzvAzXsEqx8_T6kdcdKSTfg2aotxT_DR7vaaqnGKrf9vgLG_1732697439418_completion_certificate.pdf" target="_blank" class="internship-link">View Certificate</a>
-    </div>
-</section>
-
-<!-- ✅ Projects -->
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="card project">
-        <h3>Signature Verification Using Machine Learning</h3>
-        <p><strong>Technology:</strong> Python, Machine Learning, Scikit-learn</p>
-        <p>Developed a machine learning model to authenticate handwritten signatures. The model was trained using a dataset of authentic and forged signatures to predict the authenticity of a new signature.</p>
-        <a href="https://github.com/sairamodela/signature-verification" target="_blank" class="view-project-btn">View Project</a>
-    </div>
-    <div class="card project">
-        <h3>Fake-News-Detection Using Machine Learning</h3>
-        <p><strong>Technology:</strong> Python, Machine Learning, Natural Language Processing</p>
-        <p>Designed a system using machine learning algorithms to classify and detect fake news articles. Implemented natural language processing techniques for text analysis and data preprocessing.</p>
-        <a href="https://github.com/sairamodela/fake-news-detection" target="_blank" class="view-project-btn">View Project</a>
-    </div>
-    <div class="card project">
-        <h3>Fraud Detection in Financial Transactions</h3>
-        <p><strong>Technology:</strong> Python, Flask, Machine Learning</p>
-        <p>Developed a machine learning-powered Flask application that detects fraudulent transactions with 95% accuracy.</p>
-        <a href="https://github.com/sairamodela/Fraud-Detection-In-Financial-Transactions" target="_blank" class="view-project-btn">View Project</a>
-    </div>
-</section>
-
-<!-- ✅ Certifications -->
-<section id="certifications">
-    <h2>Certifications</h2>
-    <p>I have pursued various certifications that demonstrate my commitment to continuous learning and my ability to adapt to emerging technologies. Below is a list of key certifications that highlight my skills and expertise in programming, data analysis, artificial intelligence, and cybersecurity:</p>
-    <br>
-<br>
-    <div class="certifications-container">
-        <div class="card certification">
-            <h3>Basics of Python</h3>
-            <p>Gained foundational knowledge of Python programming, including syntax, functions, and basic problem-solving techniques, through Infosys Springboard.</p>
-            <a href="https://drive.google.com/file/d/1TfSk4322LS5aa1bVXym0r78Urfuo8Nu8/view" class="view-certificate-btn">View Certificate</a>
-        </div>
-
-        <div class="card certification">
-            <h3>Programming Essentials in Python</h3>
-            <p>Completed a comprehensive program by Cisco Networking Academy focusing on Python programming, emphasizing problem-solving and coding best practices.</p>
-            <a href="https://drive.google.com/file/d/164QemQmeapZftkxdcxFeznYLQbvMNVi_/view" class="view-certificate-btn">View Certificate</a>
-        </div>
-
-        <div class="card certification">
-            <h3>Python Certified</h3>
-            <p>Successfully demonstrated expertise in Python programming by completing the certification offered by Kaggle.</p>
-            <a href="https://drive.google.com/file/d/1VQadm-9uEeAFpcMsRy1bLApYTXmWx38f/view" class="view-certificate-btn">View Certificate</a>
-        </div>
-
-        <div class="card certification">
-            <h3>Java Foundations</h3>
-            <p>Gained a solid foundation in Java programming, covering core concepts such as object-oriented programming, through Oracle Academy.</p>
-            <a href="https://drive.google.com/file/d/1c0TdB2UE3ybKqIXeiH7C7UNmODs8hrTB/view" class="view-certificate-btn">View Certificate</a>
-        </div>
-        <div class="card certification">
-            <h3>Introduction to Cybersecurity</h3>
-            <p>Learned the fundamentals of cybersecurity, including threat identification and mitigation strategies, through Cisco Networking Academy.</p>
-            <a href="https://drive.google.com/file/d/1FvV3YADlnQpyNLa-4q3dasyewsnySOuT/view" class="view-certificate-btn">View Certificate</a>
-        </div>
-        <div class="card certification">
-            <h3>Cybersecurity Essentials</h3>
-            <p>Deepened my understanding of advanced cybersecurity concepts, including securing networks and identifying vulnerabilities, through Cisco Networking Academy.</p>
-            <a href="https://drive.google.com/file/d/1FvV3YADlnQpyNLa-4q3dasyewsnySOuT/view" class="view-certificate-btn">View Certificate</a>
-        </div>
-        <div class="card certification">
-            <h3>Data Analytics and Visualization Job Simulation</h3>
-            <p>Completed a simulation project with Accenture, where I cleaned, modeled, and visualized datasets, providing actionable insights for decision-making.</p>
-            <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/T6kdcdKSTfg2aotxT/hzmoNKtzvAzXsEqx8_T6kdcdKSTfg2aotxT_DR7vaaqnGKrf9vgLG_1732697439418_completion_certificate.pdf" class="view-certificate-btn">View Certificate</a>
-        </div>
-        <div class="card certification">
-            <h3>Introduction to Generative AI</h3>
-            <p>Acquired a basic understanding of generative artificial intelligence and its applications, including language models and content generation, through Google Cloud.</p>
-            <a href="https://drive.google.com/file/d/1IymDwlXO0spaj4LJEmlh4oLomEcisLG3/view" class="view-certificate-btn">View Certificate</a>
-        </div>
-        
-    </div>
-</section>
-
-<!-- ✅ Contact -->
-<section id="contact">
-    <h2>Connect With Me</h2>
-    <p>If you'd like to get in touch, feel free to reach out via any of the following platforms!</p>
-    <div class="contact-links">
-        <a href="mailto:saiodela2@gmail.com" target="_blank"><i class="fas fa-envelope"></i> Email</a>
-        <a href="tel:+919398370408" target="_blank"><i class="fas fa-phone-alt"></i> Call</a>
-        <a href="https://www.linkedin.com/in/sairamodela" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-        <a href="https://github.com/sairamodela" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://www.instagram.com/iam.sai.18/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-    </div>
-</section>
-
-<script src="script.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("#navbar ul li a");
-
-    window.addEventListener("scroll", () => {
-        let current = "";
-
-        sections.forEach((section) => {
-            const sectionTop = section.offsetTop - 80; // adjust for navbar height
-            if (pageYOffset >= sectionTop) {
-                current = section.getAttribute("id");
-            }
-        });
-
-        navLinks.forEach((link) => {
-            link.classList.remove("active");
-            if (link.getAttribute("href").includes(current)) {
-                link.classList.add("active");
-            }
-        });
-    });
-});
-</script>
-</body>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
+
