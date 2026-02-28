@@ -775,11 +775,9 @@ button {
   }
 
   .hero-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .hero-aside {
-    justify-content: flex-start;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 24px;
   }
 
   .hero-meta {
