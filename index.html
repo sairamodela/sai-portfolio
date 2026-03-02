@@ -21,9 +21,7 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-dym/9xT7P1QXWcE2GjZq8pt5TR1+t0NenE2no0RvrRZtGJPD7WvVManIeZDV4SSQdlqz1WY5Avzk1l3pNGdisw=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
 
     <!-- AOS Animate On Scroll -->
@@ -59,6 +57,7 @@
           </nav>
 
           <div class="header-actions">
+            <div id="live-time" class="live-time" aria-live="polite"></div>
             <button
               id="nav-toggle"
               class="icon-button nav-toggle"
@@ -73,36 +72,38 @@
       <!-- Main content -->
       <main class="page-main">
         <!-- Hero / Profile -->
-        <section
-          id="profile"
-          class="section section-hero"
-          data-aos="fade-up"
-          data-aos-duration="900"
-        >
-          <div class="section-inner hero-grid">
-            <div class="hero-copy">
-              <p class="eyebrow">Backend · Data · Cloud</p>
-              <h1 class="hero-title">Building reliable, data‑driven systems.</h1>
-              <p class="hero-subtitle">
-                I’m <span class="text-strong">Sairam Odela</span>, a software
-                engineer focused on turning real‑world requirements into
-                scalable, production‑ready backend services and data workflows.
-              </p>
+<section
+  id="profile"
+  class="section section-hero"
+  data-aos="fade-up"
+  data-aos-duration="900"
+>
+  <div class="section-inner hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Backend · APIs · Cloud · AI</p>
 
-              <p class="hero-body">
-                I currently work at <span class="text-strong">Verisk Analytics</span>,
-                where I design and implement services with
-                <span class="text-strong">Python, PostgreSQL, and AWS</span>.
-                I enjoy taking features from idea to deployment with a strong
-                focus on performance, reliability, and clean architecture.
-              </p>
+      <p class="hero-subtitle">
+  I’m inspired by designing backends that stay clean, consistent, and resilient—no matter the scale or challenge.
+</p>
+      <p class="hero-body">
+        
+  I'm a software engineer at <span class="text-strong">Verisk Analytics</span>,
+  working every day with <span class="text-strong">Python</span>,
+  <span class="text-strong">REST APIs</span>, and
+  <span class="text-strong">AWS</span>.  
+  I love taking complex ideas and turning them into simple, dependable services
+  that teams can trust.  
+  Lately I've been diving deeper into <span class="text-strong">LLMs</span> and
+  <span class="text-strong">MCP</span> — excited about where AI and
+  backend engineering are heading together!!
 
-              <div class="hero-actions">
+      </p>
+             <div class="hero-actions">
                 <a
                   href="mailto:saiodela2@gmail.com"
                   class="btn btn-primary"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   <i class="fas fa-paper-plane"></i>
                   <span>Get in touch</span>
@@ -111,10 +112,20 @@
                   href="https://github.com/sairamodela"
                   class="btn btn-ghost"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   <i class="fab fa-github"></i>
                   <span>View GitHub</span>
+                </a>
+                <a
+                  id="resume-link"
+                  href="https://drive.google.com/file/d/1yVh7gNpj3siepMMJrc8qFXc5EJtURrbq/view?usp=drive_link" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-ghost"
+                >
+                  <i class="fas fa-file-alt"></i>
+                  <span class="btn-text">Resume</span>
                 </a>
               </div>
 
@@ -129,7 +140,7 @@
                 </div>
                 <div class="meta-item">
                   <span class="meta-label">Focus</span>
-                  <span class="meta-value">Backend, Data, Cloud & ML</span>
+                  <span class="meta-value">Backend, Data, Cloud</span>
                 </div>
               </div>
             </div>
@@ -138,37 +149,35 @@
               <div class="card card-profile">
                 <div class="avatar-wrapper">
                   <img
-                    src="kittu.jpg"
+                    src="profile--pic.jpg"
                     alt="Portrait of Sairam Odela"
                     class="avatar"
                   />
                 </div>
                 <div class="card-profile-body">
-                  <p>
-                    I enjoy building systems that are easy to reason about,
-                    observable in production, and straightforward to extend.
-                    Whether it’s ETL pipelines, APIs, or data‑driven products,
-                    I like owning the details end‑to‑end.
-                  </p>
-                  <div class="inline-links">
+                <p>
+                  I'm mostly a backend person — building features from scratch, improving what’s
+                  already there, and trying my best to write code that won’t scare anyone who reads
+                  it later😄. I aim for simple, clear, dependable systems (and fewer late-night bugs).
+                </p>                  <div class="inline-links">
                     <a
                       href="https://www.linkedin.com/in/sairamodela"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                     >
                       <i class="fab fa-linkedin-in"></i>
                     </a>
                     <a
                       href="https://github.com/sairamodela"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                     >
                       <i class="fab fa-github"></i>
                     </a>
                     <a
                       href="https://www.instagram.com/kittu.saai/"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                     >
                       <i class="fab fa-instagram"></i>
                     </a>
@@ -191,38 +200,43 @@
               <p class="eyebrow">Experience</p>
               <h2 class="section-title">Work Experience</h2>
             </div>
-
             <article class="card card-timeline">
-              <header class="card-timeline-header">
-                <div>
-                  <h3>Software Engineer · Verisk Analytics</h3>
-                  <p class="card-subtitle">2024 – Present</p>
-                </div>
-              </header>
-              <p class="card-body">
-                At Verisk Analytics, I work on backend solutions and cloud
-                applications that make measurable impact. I help design and
-                implement services that automate workflows, improve data
-                quality, and support analytics at scale.
-              </p>
-              <ul class="card-list">
-                <li>
-                  <strong>ETL pipeline development:</strong> Designed and
-                  automated a full ETL workflow to process large‑scale property
-                  datasets. Implemented data cleaning, transformation, and
-                  loading into AWS RDS (PostgreSQL), and built a Flask‑based
-                  web app enabling dynamic property search and filtering.
-                </li>
-                <li>
-                  <strong>LegalGenAI platform:</strong> Contribute to
-                  backend REST APIs for an AI‑driven legal platform. Optimize
-                  PostgreSQL queries, manage database operations, and ensure
-                  smooth deployments via GitLab CI/CD while collaborating with
-                  senior engineers to deliver scalable services.
-                </li>
-              </ul>
-            </article>
-          </div>
+            <header class="card-timeline-header">
+              <div>
+                <h3>Software Engineer · Verisk Analytics</h3>
+                <p class="card-subtitle">2025 – Present</p>
+              </div>
+            </header>
+          <p class="card-body">
+            At Verisk Analytics, I work as a backend-focused software engineer, spending
+            most of my time building and maintaining APIs, working with databases, and
+            supporting cloud-based systems. My role involves understanding product needs,
+            translating them into backend logic, and making sure the systems remain stable
+            and easy to work with for other teams.
+          </p>
+
+          <ul class="card-list">
+            <li>
+              <strong>Backend & data workflows:</strong>
+              I work with Python services that process and store large volumes of data,
+              handling validation, transformations, and database interactions using
+              PostgreSQL and AWS-managed services.
+            </li>
+
+            <li>
+              <strong>API development & integrations:</strong>
+              I design and maintain REST APIs used by internal applications, focusing on
+              clear request/response design, error handling, and long-term maintainability.
+            </li>
+
+            <li>
+              <strong>AI-backed internal platforms:</strong>
+              I contribute to backend services for internal AI-driven tools, working on
+              data handling, API logic, and deployment workflows while collaborating closely
+              with senior engineers.
+            </li>
+          </ul>
+    </article> 
         </section>
 
         <!-- Projects -->
@@ -239,29 +253,29 @@
             </div>
 
             <div class="grid grid-3">
-              <article class="card card-project">
-                <div class="card-badge">Machine Learning</div>
-                <h3>Signature Verification Using Machine Learning</h3>
-                <p class="card-meta">
-                  Python · Scikit‑learn · Classification
-                </p>
-                <p class="card-body">
-                  Developed a model to authenticate handwritten signatures using
-                  a dataset of genuine and forged samples, achieving high
-                  classification accuracy and demonstrating end‑to‑end ML model
-                  development.
-                </p>
-                <a
-                  href="https://github.com/sairamodela/signature-verification"
-                  class="link-inline"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span>View project</span>
-                  <i class="fas fa-arrow-right"></i>
-                </a>
-              </article>
-
+<article class="card card-project">
+  <div class="card-badge">Machine Learning</div>
+  <h3>Signature Verification Using Machine Learning</h3>
+  <p class="card-meta">
+    Python · Scikit-learn · Image Classification
+  </p>
+  <p class="card-body">
+    Built a machine learning system that verifies handwritten
+    signatures by learning visual patterns from genuine and
+    forged samples. The project covers image preprocessing,
+    feature extraction, and training a classification model to
+    make reliable authenticity predictions.
+  </p>
+    <a
+      href="https://github.com/sairamodela/signature-verification"
+      class="link-inline"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+    <span>View project</span>
+    <i class="fas fa-arrow-right"></i>
+  </a>
+</article>
               <article class="card card-project">
                 <div class="card-badge">NLP</div>
                 <h3>Fake News Detection Using Machine Learning</h3>
@@ -278,7 +292,7 @@
                   href="https://github.com/sairamodela/fake-news-detection"
                   class="link-inline"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   <span>View project</span>
                   <i class="fas fa-arrow-right"></i>
@@ -301,7 +315,7 @@
                   href="https://github.com/sairamodela/Fraud-Detection-In-Financial-Transactions"
                   class="link-inline"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   <span>View project</span>
                   <i class="fas fa-arrow-right"></i>
@@ -311,69 +325,113 @@
           </div>
         </section>
 
-        <!-- Skills -->
-        <section
-          id="skills"
-          class="section section-alt"
-          data-aos="fade-up"
-          data-aos-duration="900"
-        >
-          <div class="section-inner">
-            <div class="section-header">
-              <p class="eyebrow">Strengths</p>
-              <h2 class="section-title">Skills</h2>
-            </div>
+<!-- Skills -->
+<section
+  id="skills"
+  class="section section-alt"
+  data-aos="fade-up"
+  data-aos-duration="900"
+>
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="eyebrow">Skills</p>
+      <h2 class="section-title">Technical Skills</h2>
+    </div>
 
-            <div class="grid grid-3 skills-grid">
-              <div class="card card-skill-group">
-                <h3>Languages & Core</h3>
-                <ul>
-                  <li>Python</li>
-                  <li>Java</li>
-                  <li>C</li>
-                  <li>JavaScript</li>
-                </ul>
-              </div>
+    <div class="grid grid-3 skills-grid">
 
-              <div class="card card-skill-group">
-                <h3>Web & Frameworks</h3>
-                <ul>
-                  <li>HTML & CSS</li>
-                  <li>Angular</li>
-                  <li>Flask</li>
-                </ul>
-              </div>
+      <!-- Programming Languages -->
+      <div class="card card-skill-group">
+        <h3>Programming Languages</h3>
+        <ul>
+          <li>Python</li>
+          <li>Java</li>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+        </ul>
+      </div>
 
-              <div class="card card-skill-group">
-                <h3>Data & Cloud</h3>
-                <ul>
-                  <li>MySQL & PostgreSQL</li>
-                  <li>AWS</li>
-                  <li>ETL Pipelines</li>
-                </ul>
-              </div>
+      <!-- Web & Frontend -->
+      <div class="card card-skill-group">
+        <h3>Web & Frontend</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Angular</li>
+          <li>Streamlit</li>
+        </ul>
+      </div>
 
-              <div class="card card-skill-group">
-                <h3>Developer Tools</h3>
-                <ul>
-                  <li>Git, GitHub, GitLab</li>
-                  <li>CI/CD Pipelines</li>
-                  <li>Postman</li>
-                </ul>
-              </div>
+      <!-- Backend & APIs -->
+      <div class="card card-skill-group">
+        <h3>Backend & APIs</h3>
+        <ul>
+          <li>Flask</li>
+          <li>FastAPI</li>
+          <li>REST APIs</li>
+        </ul>
+      </div>
 
-              <div class="card card-skill-group">
-                <h3>IDEs & Environments</h3>
-                <ul>
-                  <li>VS Code</li>
-                  <li>Eclipse IDE</li>
-                  <li>IntelliJ IDEA</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
+      <!-- Databases -->
+      <div class="card card-skill-group">
+        <h3>Databases</h3>
+        <ul>
+          <li>PostgreSQL</li>
+          <li>MySQL</li>
+          <li>DynamoDB</li>
+        </ul>
+      </div>
 
+      <!-- Cloud & AWS -->
+      <div class="card card-skill-group">
+        <h3>Cloud & AWS</h3>
+        <ul>
+          <li>EC2</li>
+          <li>Lambda</li>
+          <li>S3</li>
+          <li>RDS (PostgreSQL)</li>
+          <li>CloudWatch</li>
+          <li>OpenSearch</li>
+          <li>Bedrock</li>
+        </ul>
+      </div>
+
+      <!-- AI & Data -->
+      <div class="card card-skill-group">
+        <h3>AI & Data</h3>
+        <ul>
+          <li>Large Language Models (LLMs)</li>
+          <li>Retrieval-Augmented Generation (RAG)</li>
+          <li>Model Context Protocol (MCP)</li>
+          <li>Pandas</li>
+          <li>NumPy</li>
+        </ul>
+      </div>
+
+      <!-- DevOps & Tooling -->
+      <div class="card card-skill-group">
+        <h3>DevOps & Tooling</h3>
+        <ul>
+          <li>Docker</li>
+          <li>Git, GitHub, GitLab</li>
+          <li>GitLab CI/CD</li>
+          <li>Postman</li>
+        </ul>
+      </div>
+
+      <!-- IDEs & Editors -->
+      <div class="card card-skill-group">
+        <h3>IDEs & Editors</h3>
+        <ul>
+          <li>Visual Studio Code</li>
+          <li>IntelliJ IDEA</li>
+          <li>Eclipse</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
         <!-- Education -->
         <section
           id="education"
@@ -479,7 +537,7 @@
                 href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/T6kdcdKSTfg2aotxT/hzmoNKtzvAzXsEqx8_T6kdcdKSTfg2aotxT_DR7vaaqnGKrf9vgLG_1732697439418_completion_certificate.pdf"
                 class="link-inline"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 <span>View certificate</span>
                 <i class="fas fa-arrow-right"></i>
@@ -518,7 +576,7 @@
                   href="https://drive.google.com/file/d/1TfSk4322LS5aa1bVXym0r78Urfuo8Nu8/view"
                   class="link-inline"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   <span>View certificate</span>
                   <i class="fas fa-arrow-right"></i>
@@ -535,7 +593,7 @@
                   href="https://drive.google.com/file/d/164QemQmeapZftkxdcxFeznYLQbvMNVi_/view"
                   class="link-inline"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   <span>View certificate</span>
                   <i class="fas fa-arrow-right"></i>
@@ -552,7 +610,7 @@
                   href="https://drive.google.com/file/d/1VQadm-9uEeAFpcMsRy1bLApYTXmWx38f/view"
                   class="link-inline"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   <span>View certificate</span>
                   <i class="fas fa-arrow-right"></i>
@@ -569,7 +627,7 @@
                   href="https://drive.google.com/file/d/1c0TdB2UE3ybKqIXeiH7C7UNmODs8hrTB/view"
                   class="link-inline"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   <span>View certificate</span>
                   <i class="fas fa-arrow-right"></i>
@@ -586,7 +644,7 @@
                   href="https://drive.google.com/file/d/1FvV3YADlnQpyNLa-4q3dasyewsnySOuT/view"
                   class="link-inline"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   <span>View certificate</span>
                   <i class="fas fa-arrow-right"></i>
@@ -603,7 +661,7 @@
                   href="https://drive.google.com/file/d/1FvV3YADlnQpyNLa-4q3dasyewsnySOuT/view"
                   class="link-inline"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   <span>View certificate</span>
                   <i class="fas fa-arrow-right"></i>
@@ -621,7 +679,7 @@
                   href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/T6kdcdKSTfg2aotxT/hzmoNKtzvAzXsEqx8_T6kdcdKSTfg2aotxT_DR7vaaqnGKrf9vgLG_1732697439418_completion_certificate.pdf"
                   class="link-inline"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   <span>View certificate</span>
                   <i class="fas fa-arrow-right"></i>
@@ -638,7 +696,7 @@
                   href="https://drive.google.com/file/d/1IymDwlXO0spaj4LJEmlh4oLomEcisLG3/view"
                   class="link-inline"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   <span>View certificate</span>
                   <i class="fas fa-arrow-right"></i>
@@ -669,65 +727,60 @@
               <a
                 href="mailto:saiodela2@gmail.com"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 class="contact-card"
               >
                 <i class="fas fa-envelope"></i>
                 <div>
                   <span class="contact-label">Email</span>
-                  <span class="contact-value">saiodela2@gmail.com</span>
                 </div>
               </a>
 
               <a
                 href="tel:+919398370408"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 class="contact-card"
               >
                 <i class="fas fa-phone-alt"></i>
                 <div>
                   <span class="contact-label">Phone</span>
-                  <span class="contact-value">+91 93983 70408</span>
                 </div>
               </a>
 
               <a
                 href="https://www.linkedin.com/in/sairamodela"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 class="contact-card"
               >
                 <i class="fab fa-linkedin-in"></i>
                 <div>
                   <span class="contact-label">LinkedIn</span>
-                  <span class="contact-value">@sairamodela</span>
                 </div>
               </a>
 
               <a
                 href="https://github.com/sairamodela"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 class="contact-card"
               >
                 <i class="fab fa-github"></i>
                 <div>
                   <span class="contact-label">GitHub</span>
-                  <span class="contact-value">@sairamodela</span>
                 </div>
               </a>
 
               <a
-                href="https://www.instagram.com//kittu.saai/"
+                href="https://www.instagram.com/kittu.saai/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 class="contact-card"
               >
                 <i class="fab fa-instagram"></i>
                 <div>
                   <span class="contact-label">Instagram</span>
-                  <span class="contact-value">@kittu.saai</span>
                 </div>
               </a>
             </div>

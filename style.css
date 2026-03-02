@@ -195,6 +195,14 @@ button {
   display: none;
 }
 
+/* Live clock in header */
+.live-time {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  min-width: 3.5em;
+  text-align: right;
+}
+
 /* Layout */
 
 .page-main {
@@ -349,6 +357,22 @@ button {
   font-size: 13px;
 }
 
+/* Loading state for buttons */
+.btn-loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+.btn-loading .btn-text {
+  visibility: hidden;
+}
+.btn-loading .spinner {
+  display: inline-block;
+}
+.spinner {
+  display: none;
+}
+
+
 .hero-meta {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -388,7 +412,13 @@ button {
 .card-profile .card-profile-body {
   padding: 16px 18px 18px;
 }
-
+.card-timeline-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+}
 .avatar-wrapper {
   padding: 4px;
   border-radius: 26px;

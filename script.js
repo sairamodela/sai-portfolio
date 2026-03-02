@@ -17,6 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const backToTop = document.getElementById("back-to-top");
   const sections = Array.from(document.querySelectorAll("main section[id]"));
 
+  // Mark icon elements as decorative for screen readers
+  document.querySelectorAll("i").forEach((icon) => {
+    if (!icon.hasAttribute("aria-hidden")) {
+      icon.setAttribute("aria-hidden", "true");
+    }
+  });
+
   // Mobile navigation toggle
   if (nav && navToggle) {
     navToggle.addEventListener("click", () => {
@@ -109,6 +116,40 @@ document.addEventListener("DOMContentLoaded", () => {
         behavior: "smooth",
       });
     });
+  }
+
+  // Resume link loading indicator
+  const resumeLink = document.getElementById("resume-link");
+  if (resumeLink) {
+    resumeLink.addEventListener("click", (e) => {
+      // Allow middle-click / ctrl/cmd/shift/alt modified clicks to open in new tab/window
+      if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) {
+        return;
+      }
+
+      e.preventDefault();
+      resumeLink.classList.add("btn-loading");
+
+      // replace content with opening text and spinner
+      resumeLink.innerHTML =
+        'Opening <i class="fas fa-spinner fa-spin spinner"></i>';
+
+      // navigate after short delay to allow spinner to show
+      setTimeout(() => {
+        window.location.href = resumeLink.href;
+      }, 100);
+    });
+  }
+
+  // Live clock display
+  const liveTimeEl = document.getElementById("live-time");
+  if (liveTimeEl) {
+    const updateTime = () => {
+      const now = new Date();
+      liveTimeEl.textContent = now.toLocaleTimeString();
+    };
+    updateTime();
+    setInterval(updateTime, 1000);
   }
 });
 
