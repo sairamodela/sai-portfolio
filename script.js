@@ -82,11 +82,20 @@ document.addEventListener("DOMContentLoaded", () => {
       if (nav && nav.classList.contains("is-open")) {
         nav.classList.remove("is-open");
       }
+      
+      // Temporarily pause the active nav intersection observer until scroll completes
+      isProgrammaticScroll = true;
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        isProgrammaticScroll = false;
+      }, 800);
     });
   });
 
   // Scroll-based header + nav link state + back-to-top button
   let isScrolling = false;
+  let isProgrammaticScroll = false;
+  let scrollTimeout;
   
   const handleScroll = () => {
     if (!isScrolling) {
@@ -112,34 +121,36 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         // Active nav link
-        let activeId = "";
-        const headerHeight = header ? header.offsetHeight : 0;
+        if (!isProgrammaticScroll) {
+          let activeId = "";
+          const headerHeight = header ? header.offsetHeight : 0;
 
-        sections.forEach((section) => {
-          const rect = section.getBoundingClientRect();
-          const top = rect.top + window.scrollY - headerHeight - 40;
-          const bottom = top + section.offsetHeight;
-          if (scrollY >= top && scrollY < bottom) {
-            activeId = section.id;
-          }
-        });
-
-        // Ensure the last section is highlighted when scrolling reaches the bottom
-        if (window.innerHeight + Math.round(scrollY) >= document.body.offsetHeight - 10) {
-          if (sections.length > 0) {
-            activeId = sections[sections.length - 1].id;
-          }
-        }
-
-        if (activeId) {
-          navLinks.forEach((link) => {
-            const href = link.getAttribute("href");
-            if (href === `#${activeId}`) {
-              link.classList.add("is-active");
-            } else {
-              link.classList.remove("is-active");
+          sections.forEach((section) => {
+            const rect = section.getBoundingClientRect();
+            const top = rect.top + window.scrollY - headerHeight - 40;
+            const bottom = top + section.offsetHeight;
+            if (scrollY >= top && scrollY < bottom) {
+              activeId = section.id;
             }
           });
+
+          // Ensure the last section is highlighted when scrolling reaches the bottom
+          if (window.innerHeight + Math.round(scrollY) >= document.body.offsetHeight - 10) {
+            if (sections.length > 0) {
+              activeId = sections[sections.length - 1].id;
+            }
+          }
+
+          if (activeId) {
+            navLinks.forEach((link) => {
+              const href = link.getAttribute("href");
+              if (href === `#${activeId}`) {
+                link.classList.add("is-active");
+              } else {
+                link.classList.remove("is-active");
+              }
+            });
+          }
         }
         
         isScrolling = false;
