@@ -24,8 +24,42 @@
   box-sizing: border-box;
 }
 
+/* Custom Webkit Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-body);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 999px;
+  border: 2px solid var(--bg-body);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+/* Highly Professional Text Selection */
+::selection {
+  background: rgba(56, 189, 248, 0.25);
+  color: #ffffff;
+}
+[data-theme="light"] ::selection {
+  background: rgba(239, 68, 68, 0.25);
+  color: inherit;
+}
+
+/* ADA Keyboard Accessibility Focus Rings */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 html {
   /* Let JS handle smooth scrolling offset calculations to prevent Safari jank */
+  scroll-padding-top: 100px; /* Prevents native hard anchor loads from hiding behind header */
 }
 
 body {
