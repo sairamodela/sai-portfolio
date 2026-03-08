@@ -16,6 +16,33 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".site-nav .nav-link");
   const backToTop = document.getElementById("back-to-top");
   const sections = Array.from(document.querySelectorAll("main section[id]"));
+  const themeToggle = document.getElementById("theme-toggle");
+
+  // Theme toggle logic
+  if (themeToggle) {
+    const icon = themeToggle.querySelector("i");
+    
+    // Set initial icon based on data-theme
+    if (document.documentElement.getAttribute("data-theme") === "light") {
+      icon.classList.remove("fa-sun");
+      icon.classList.add("fa-moon");
+    }
+
+    themeToggle.addEventListener("click", () => {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      if (currentTheme === "light") {
+        document.documentElement.removeAttribute("data-theme");
+        localStorage.setItem("theme", "dark");
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+      } else {
+        document.documentElement.setAttribute("data-theme", "light");
+        localStorage.setItem("theme", "light");
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+      }
+    });
+  }
 
   // Mark icon elements as decorative for screen readers
   document.querySelectorAll("i").forEach((icon) => {
@@ -59,56 +86,65 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Scroll-based header + nav link state + back-to-top button
+  let isScrolling = false;
+  
   const handleScroll = () => {
-    const scrollY = window.scrollY || window.pageYOffset;
+    if (!isScrolling) {
+      window.requestAnimationFrame(() => {
+        const scrollY = window.scrollY || window.pageYOffset;
 
-    // Header shadow state
-    if (header) {
-      if (scrollY > 10) {
-        header.classList.add("site-header--scrolled");
-      } else {
-        header.classList.remove("site-header--scrolled");
-      }
-    }
-
-    // Back-to-top visibility
-    if (backToTop) {
-      if (scrollY > 260) {
-        backToTop.classList.add("is-visible");
-      } else {
-        backToTop.classList.remove("is-visible");
-      }
-    }
-
-    // Active nav link
-    let activeId = "";
-    const headerHeight = header ? header.offsetHeight : 0;
-
-    sections.forEach((section) => {
-      const rect = section.getBoundingClientRect();
-      const top = rect.top + window.scrollY - headerHeight - 40;
-      const bottom = top + section.offsetHeight;
-      if (scrollY >= top && scrollY < bottom) {
-        activeId = section.id;
-      }
-    });
-
-    // Ensure the last section is highlighted when scrolling reaches the bottom
-    if (window.innerHeight + Math.round(scrollY) >= document.body.offsetHeight - 10) {
-      if (sections.length > 0) {
-        activeId = sections[sections.length - 1].id;
-      }
-    }
-
-    if (activeId) {
-      navLinks.forEach((link) => {
-        const href = link.getAttribute("href");
-        if (href === `#${activeId}`) {
-          link.classList.add("is-active");
-        } else {
-          link.classList.remove("is-active");
+        // Header shadow state
+        if (header) {
+          if (scrollY > 10) {
+            header.classList.add("site-header--scrolled");
+          } else {
+            header.classList.remove("site-header--scrolled");
+          }
         }
+
+        // Back-to-top visibility
+        if (backToTop) {
+          if (scrollY > 260) {
+            backToTop.classList.add("is-visible");
+          } else {
+            backToTop.classList.remove("is-visible");
+          }
+        }
+
+        // Active nav link
+        let activeId = "";
+        const headerHeight = header ? header.offsetHeight : 0;
+
+        sections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+          const top = rect.top + window.scrollY - headerHeight - 40;
+          const bottom = top + section.offsetHeight;
+          if (scrollY >= top && scrollY < bottom) {
+            activeId = section.id;
+          }
+        });
+
+        // Ensure the last section is highlighted when scrolling reaches the bottom
+        if (window.innerHeight + Math.round(scrollY) >= document.body.offsetHeight - 10) {
+          if (sections.length > 0) {
+            activeId = sections[sections.length - 1].id;
+          }
+        }
+
+        if (activeId) {
+          navLinks.forEach((link) => {
+            const href = link.getAttribute("href");
+            if (href === `#${activeId}`) {
+              link.classList.add("is-active");
+            } else {
+              link.classList.remove("is-active");
+            }
+          });
+        }
+        
+        isScrolling = false;
       });
+      isScrolling = true;
     }
   };
 
@@ -160,15 +196,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Live clock display
+  // Live clock display (India Standard Time)
   const liveTimeEl = document.getElementById("live-time");
   if (liveTimeEl) {
     const updateTime = () => {
       const now = new Date();
-      liveTimeEl.textContent = now.toLocaleTimeString();
+      // Format specifically to Asia/Kolkata (IST)
+      const timeString = now.toLocaleTimeString("en-US", {
+        timeZone: "Asia/Kolkata",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true,
+      });
+      liveTimeEl.innerHTML = `${timeString} IST`;
     };
     updateTime();
-    setInterval(updateTime, 1000);
+    // Update every minute (no need for seconds anymore)
+    setInterval(updateTime, 10000);
   }
 });
 
