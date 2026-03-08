@@ -93,6 +93,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
+    // Ensure the last section is highlighted when scrolling reaches the bottom
+    if (window.innerHeight + Math.round(scrollY) >= document.body.offsetHeight - 10) {
+      if (sections.length > 0) {
+        activeId = sections[sections.length - 1].id;
+      }
+    }
+
     if (activeId) {
       navLinks.forEach((link) => {
         const href = link.getAttribute("href");
@@ -121,23 +128,35 @@ document.addEventListener("DOMContentLoaded", () => {
   // Resume link loading indicator
   const resumeLink = document.getElementById("resume-link");
   if (resumeLink) {
+    const originalText = resumeLink.innerHTML;
+
     resumeLink.addEventListener("click", (e) => {
       // Allow middle-click / ctrl/cmd/shift/alt modified clicks to open in new tab/window
       if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) {
         return;
       }
 
-      e.preventDefault();
+      // We do not use e.preventDefault() so that the browser handles opening the tab natively (respecting target="_blank")
+      // This helps avoid popup blockers while still allowing us to show the loading indicator in the original tab.
+
+      if (resumeLink.classList.contains("btn-loading")) return;
+
       resumeLink.classList.add("btn-loading");
+      resumeLink.innerHTML = 'Opening <i class="fas fa-spinner fa-spin spinner"></i>';
 
-      // replace content with opening text and spinner
-      resumeLink.innerHTML =
-        'Opening <i class="fas fa-spinner fa-spin spinner"></i>';
-
-      // navigate after short delay to allow spinner to show
+      // Restore button state after a delay (if the user returns to this tab)
       setTimeout(() => {
-        window.location.href = resumeLink.href;
-      }, 100);
+        resumeLink.innerHTML = originalText;
+        resumeLink.classList.remove("btn-loading");
+      }, 2000);
+    });
+
+    // Reset button state if the page is loaded from bfcache (when user clicks Back button from same tab)
+    window.addEventListener("pageshow", (e) => {
+      if (e.persisted || (window.performance && window.performance.navigation && window.performance.navigation.type === 2)) {
+        resumeLink.innerHTML = originalText;
+        resumeLink.classList.remove("btn-loading");
+      }
     });
   }
 
