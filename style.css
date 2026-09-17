@@ -116,7 +116,8 @@ button {
 .site-header-inner {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 14px 24px 12px;
+  padding: 0 24px;
+  height: 66px; /* deterministic height so the mobile nav panel aligns exactly below it */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -210,8 +211,8 @@ button {
   border: 1px solid rgba(148, 163, 184, 0.35);
   background: rgba(15, 23, 42, 0.85);
   color: var(--text-main);
-  width: 34px;
-  height: 34px;
+  width: 40px;
+  height: 40px;
   border-radius: 999px;
   display: flex;
   align-items: center;
@@ -334,10 +335,24 @@ button {
 }
 
 .hero-title {
-  font-size: 32px;
+  font-size: 34px;
   line-height: 1.15;
   letter-spacing: -0.02em;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.hero-role {
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+[data-theme="light"] .hero-role {
+  background: linear-gradient(90deg, #dc2626, #ef4444);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .hero-subtitle {
@@ -488,8 +503,8 @@ button {
 }
 
 .inline-links a {
-  width: 30px;
-  height: 30px;
+  width: 38px;
+  height: 38px;
   border-radius: 999px;
   display: flex;
   align-items: center;
@@ -747,6 +762,8 @@ button {
 .contact-value {
   display: block;
   font-size: 14px;
+  color: var(--text-main);
+  overflow-wrap: anywhere;
 }
 
 .contact-card:hover {
@@ -761,8 +778,8 @@ button {
   position: fixed;
   right: 22px;
   bottom: 22px;
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
   border-radius: 999px;
   background: radial-gradient(circle at 0 0, #38bdf8, #6366f1);
   border: none;
@@ -1027,15 +1044,13 @@ button {
   }
 }
 
-@media (max-width: 768px) {
-  .site-header-inner {
-    padding-inline: 16px;
-  }
-
+/* Collapse the nav into a hamburger below 1024px: 7 uppercase links
+   don't fit next to the brand on tablet widths and would get clipped. */
+@media (max-width: 1024px) {
   .site-nav {
     position: fixed;
     inset-inline: 0;
-    top: 54px;
+    top: 66px; /* flush with the fixed header height */
     background: rgba(15, 23, 42, 0.98);
     border-bottom: 1px solid rgba(37, 99, 235, 0.8);
     flex-direction: column;
@@ -1061,6 +1076,12 @@ button {
 
   .nav-toggle {
     display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header-inner {
+    padding-inline: 16px;
   }
 
   .page-main {

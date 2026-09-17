@@ -5,6 +5,8 @@ window.addEventListener("load", () => {
       once: true,
       duration: 750,
       easing: "ease-out-cubic",
+      // Respect the user's motion preferences (CSS already forces content visible)
+      disable: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
     });
   }
 });
@@ -53,8 +55,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Mobile navigation toggle
   if (nav && navToggle) {
+    const setNavOpen = (open) => {
+      nav.classList.toggle("is-open", open);
+      navToggle.setAttribute("aria-expanded", String(open));
+    };
+
     navToggle.addEventListener("click", () => {
-      nav.classList.toggle("is-open");
+      setNavOpen(!nav.classList.contains("is-open"));
+    });
+
+    // Escape closes the menu and returns focus to the toggle button
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && nav.classList.contains("is-open")) {
+        setNavOpen(false);
+        navToggle.focus();
+      }
     });
   }
 
@@ -81,6 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Close mobile nav after selection
       if (nav && nav.classList.contains("is-open")) {
         nav.classList.remove("is-open");
+        if (navToggle) navToggle.setAttribute("aria-expanded", "false");
       }
       
       // Temporarily pause the active nav intersection observer until scroll completes
