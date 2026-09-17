@@ -13,8 +13,12 @@
     <meta property="og:title" content="Sairam Odela · Software Engineer" />
     <meta property="og:description" content="Portfolio of Software Engineer Sairam Odela – backend, data, and cloud projects, experience, skills, and certifications." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://sairamodela.github.io/" />
+    <meta property="og:url" content="https://sairamodela.github.io/sai-portfolio/" />
+    <meta property="og:image" content="https://sairamodela.github.io/sai-portfolio/profile--pic.jpg" />
+    <link rel="canonical" href="https://sairamodela.github.io/sai-portfolio/" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sairam Odela · Software Engineer" />
+    <meta name="twitter:description" content="Portfolio of Software Engineer Sairam Odela – backend, data, and cloud projects, experience, skills, and certifications." />
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#020617" />
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f8fafc" />
     
@@ -45,6 +49,20 @@
 
     <!-- App styles -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Safety net: content must never be hidden when JS is off or the user prefers reduced motion -->
+    <noscript>
+      <style>
+        [data-aos] { opacity: 1 !important; transform: none !important; transition: none !important; }
+      </style>
+    </noscript>
+    <style>
+      @media (prefers-reduced-motion: reduce) {
+        [data-aos] { opacity: 1 !important; transform: none !important; transition: none !important; }
+        html { scroll-behavior: auto; }
+      }
+    </style>
+
     
     <!-- Theme initialization -->
     <script>
@@ -90,6 +108,8 @@
               id="nav-toggle"
               class="icon-button nav-toggle"
               aria-label="Toggle navigation"
+              aria-expanded="false"
+              aria-controls="site-nav"
             >
               <i class="fas fa-bars"></i>
             </button>
@@ -110,28 +130,30 @@
     <div class="hero-copy">
       <p class="eyebrow">Backend · APIs · Cloud · AI</p>
 
-      <p class="hero-subtitle">
-  I’m inspired by designing backends that stay clean, consistent, and resilient—no matter the scale or challenge.
-</p>
-      <p class="hero-body">
-        
-  I'm a software engineer at <span class="text-strong">Verisk Analytics</span>,
-  working every day with <span class="text-strong">Python</span>,
-  <span class="text-strong">REST APIs</span>, and
-  <span class="text-strong">AWS</span>.  
-  I love taking complex ideas and turning them into simple, dependable services
-  that teams can trust.  
-  Lately I've been diving deeper into <span class="text-strong">LLMs</span> and
-  <span class="text-strong">MCP</span> — excited about where AI and
-  backend engineering are heading together!!
+      <h1 class="hero-title">
+        Hi, I’m Sairam Odela —<br />
+        <span class="hero-role">Software Engineer</span>
+      </h1>
 
+      <p class="hero-subtitle">
+        I design backends that stay clean, consistent, and resilient — no
+        matter the scale or challenge.
+      </p>
+      <p class="hero-body">
+        I'm a software engineer at <span class="text-strong">Verisk Analytics</span>,
+        working every day with <span class="text-strong">Python</span>,
+        <span class="text-strong">REST APIs</span>, and
+        <span class="text-strong">AWS</span>.
+        I love taking complex ideas and turning them into simple, dependable
+        services that teams can trust.
+        Lately I've been diving deeper into <span class="text-strong">LLMs</span>
+        and <span class="text-strong">MCP</span> — excited about where AI and
+        backend engineering are heading together.
       </p>
              <div class="hero-actions">
                 <a
                   href="mailto:saiodela2@gmail.com"
                   class="btn btn-primary"
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
                   <i class="fas fa-paper-plane"></i>
                   <span>Get in touch</span>
@@ -758,25 +780,23 @@
             <div class="contact-grid">
               <a
                 href="mailto:saiodela2@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
                 class="contact-card"
               >
                 <i class="fas fa-envelope"></i>
                 <div>
                   <span class="contact-label">Email</span>
+                  <span class="contact-value">saiodela2@gmail.com</span>
                 </div>
               </a>
 
               <a
                 href="tel:+919398370408"
-                target="_blank"
-                rel="noopener noreferrer"
                 class="contact-card"
               >
                 <i class="fas fa-phone-alt"></i>
                 <div>
                   <span class="contact-label">Phone</span>
+                  <span class="contact-value">+91 93983 70408</span>
                 </div>
               </a>
 
@@ -789,6 +809,7 @@
                 <i class="fab fa-linkedin-in"></i>
                 <div>
                   <span class="contact-label">LinkedIn</span>
+                  <span class="contact-value">in/sairamodela</span>
                 </div>
               </a>
 
@@ -801,6 +822,7 @@
                 <i class="fab fa-github"></i>
                 <div>
                   <span class="contact-label">GitHub</span>
+                  <span class="contact-value">sairamodela</span>
                 </div>
               </a>
 
@@ -813,6 +835,7 @@
                 <i class="fab fa-instagram"></i>
                 <div>
                   <span class="contact-label">Instagram</span>
+                  <span class="contact-value">@kittu.saai</span>
                 </div>
               </a>
             </div>
